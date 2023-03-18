@@ -4,8 +4,12 @@
   "description": "sadhya ecommerse backend api",
   "main": "index.js",
   "scripts": {
+    "start": "node ./index.js",
+    "build": "tsc -p .",
+    "dev": "nodemon ./index.ts",
     "lint": "eslint --fix \"src/**/*.{js,ts}\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "precommit":"npm run lint && npm run format"
   },
   "author": "AmshenShanu07",
   "license": "ISC",
@@ -40,6 +44,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
     "nodemon": "^2.0.15",
     "prettier": "^2.8.4",
     "ts-node": "^10.7.0",
