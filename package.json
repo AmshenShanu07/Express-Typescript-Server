@@ -4,9 +4,9 @@
   "description": "sadhya ecommerse backend api",
   "main": "index.js",
   "scripts": {
-    "start": "node ./build/index.js",
+    "start": "tsc -p . && node ./build/index.js",
     "build": "tsc -p .",
-    "dev": "nodemon ./index.ts",
+    "start:dev": "nodemon ./index.ts",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint --fix \"src/**/*.{js,ts}\""
   },
