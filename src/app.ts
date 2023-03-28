@@ -1,9 +1,10 @@
 import express, { Application } from 'express';
-import logger from 'morgan';
 import fileUpload from 'express-fileupload';
-import cors from 'cors';
 import * as dotenv from 'dotenv';
+import logger from 'morgan';
+import cors from 'cors';
 
+import authRouter from './core/auth/auth.route';
 
 const app: Application = express();
 dotenv.config();
@@ -26,6 +27,8 @@ app.use(
     tempFileDir: '/tmp/',
   }),
 );
+
+app.use('/v1/auth', authRouter);
 
 app.get('/', (req, res) => {
   res.send('Sadhya Backend Api');
