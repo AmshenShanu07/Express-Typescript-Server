@@ -35,10 +35,12 @@ const userSchema = new Schema<UserDocumentI>({
   },
 });
 
+// ** Custom Methods
 userSchema.methods.checkPassword = function (password: string) {
   return this.password === password;
 };
 
+// ** Custom Static Methods
 userSchema.statics.findAllUsers = function () {
   return this.find({});
 };

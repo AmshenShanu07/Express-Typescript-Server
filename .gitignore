@@ -1,5 +1,11 @@
+# development files
 node_modules
 package-lock.json
 yarn.lock
+
+# env files
 .vscode
 .env
+
+# build files
+build
